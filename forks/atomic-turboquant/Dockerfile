@@ -3,7 +3,7 @@
 #
 # Release assets are tar.gz archives (not zip), one per backend, e.g.
 # llama-turboquant-linux-x64-rocm.tar.gz / -vulkan.tar.gz / -cuda-12.4.tar.gz /
-# -cpu.tar.gz, under a shared release tag like `b10269-1.6.0`.
+# -cpu.tar.gz, under a shared release tag like `b10269-1.7.0`.
 #
 # This Dockerfile builds the combined ROCm+Vulkan image. Atomic's ROCm asset
 # does not bundle full ROCm userspace, so this image intentionally layers on
@@ -16,14 +16,14 @@
 # backend assets and checksums as build args, pinned to a release you have
 # verified yourself.
 #
-# Example build (combined rocm+vulkan assets, release b10269-1.6.0):
+# Example build (combined rocm+vulkan assets, release b10269-1.7.0):
 #   docker build \
-#     --build-arg TURBOQUANT_VERSION=b10269-1.6.0 \
+#     --build-arg TURBOQUANT_VERSION=b10269-1.7.0 \
 #     --build-arg TURBOQUANT_ROCM_ASSET=llama-turboquant-linux-x64-rocm.tar.gz \
-#     --build-arg TURBOQUANT_ROCM_SHA256=e7758e3191827460de13976284160878d02920acb17d54007bd548521def7dc9 \
+#     --build-arg TURBOQUANT_ROCM_SHA256=ac636cc298e4fd2cfc66f7ebbb494d6fd4f8eaeb9878327080210efaad2ff808 \
 #     --build-arg TURBOQUANT_VULKAN_ASSET=llama-turboquant-linux-x64-vulkan.tar.gz \
-#     --build-arg TURBOQUANT_VULKAN_SHA256=a0a3bc7b067fbac5e402ff3d603c50eaeffe505c5f576e6affb98ecaa9706aa3 \
-#     -t atomic-lemon:combined-b10269-1.6.0 \
+#     --build-arg TURBOQUANT_VULKAN_SHA256=669d1c42c315760eb3bfffc649bf104b2265494587d39c3fc88e7da3b079ef70 \
+#     -t atomic-lemon:combined-b10269-1.7.0 \
 #     -f forks/atomic-turboquant/Dockerfile forks/atomic-turboquant
 #
 # For any other release/backend asset, look up the exact filename and compute

@@ -13,7 +13,7 @@
 # three as build args, pinned to a release you have verified yourself. Look
 # up the exact vulkan asset filename for the release you want and compute
 # its sha256 yourself; do not reuse any ROCm checksum for this variant.
-ARG BASE_IMAGE=lemon-base:lemonade-v11.9.0
+ARG BASE_IMAGE=lemon-base:lemonade-v2026.40.0
 FROM ${BASE_IMAGE}
 
 USER root

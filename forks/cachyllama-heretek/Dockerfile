@@ -33,7 +33,7 @@
 # For any other GPU target or release, look up the exact asset filename and
 # compute its sha256 yourself from the actual release download -- do not
 # reuse the checksums above for different assets.
-ARG BASE_IMAGE=lemon-base:lemonade-v11.9.0
+ARG BASE_IMAGE=lemon-base:lemonade-v2026.40.0
 FROM ${BASE_IMAGE}
 
 USER root
